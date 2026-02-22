@@ -7,7 +7,7 @@ int main()
     double woodcuttingxp = 0;
     double magicxp = 0;
     double inv = 0;
-    double gp = 50;
+    double gp = 25;
     double combatlvl = 1;
     double magiclvl;
     double mininglvl =1;
@@ -20,8 +20,10 @@ int main()
     double waterrunes = 5000;
     double earthrunes = 5000;
     double firerunes = 5000;
+    double atklvl = 1;
+    double atkxp = 0;
 
-    bool kakica = true;
+    string kakica = "true";
     magiclvl = magicxp / 100.0 + 1;
     string tree;
     string swordequip = "None";
@@ -35,14 +37,17 @@ int main()
     string quest;
     string skill;
     string skillorquest;
+    string gauntletchoice;
+    string atkcb;
     string playrs;
 
 
 
-while (kakica)
+
+while (kakica=="true")
 {
     cout << "Welcome to RuneScape In Console App... Play? (y/n)" << endl;
-    string playrs;
+
     cin >> playrs;
 
     if (playrs == "n")
@@ -53,7 +58,7 @@ while (kakica)
     }
 if (playrs == "y")
 {
-
+    kakica = "true";
 
 
     cout << "-------------------" << endl;
@@ -64,12 +69,12 @@ if (playrs == "y")
         if(skillorquest == "s")
         {
 
-            cout << "What skill are you gonna level up?" << endl;
+            cout << "What skill are you going to level up?" << endl;
             cout << "-----------------------------------" << endl;
             cout << "Attack (a)" << endl;
-            cout << "Mining (m)" << endl;
             cout << "Woodcutting (w)" << endl;
             cout << "Magic (mg)" << endl;
+            cout << "All content below is in the paid version."  << endl;
             cout << "Firemaking (fm)" << endl;
             cout << "Fishing (fsh)" << endl;
             cout << "Cooking (cg)" << endl;
@@ -77,11 +82,35 @@ if (playrs == "y")
             cin >> skill;
             if(skill == "a")
             {
-                cout << "Leveling up attack..." << endl;
-            }
-            else if(skill == "m")
-            {
-                cout << "Leveling mining..." << endl;
+
+
+
+                    cout << "Goblins (Level 2 Enemy) 50xp per kill (gb)"<< endl;
+                    cout << "All content below is in the paid version." << endl;
+                    cout << "Cows (Level 5 Enemy) 75xp per kill (cw)" << endl;
+                    cout << "Wizards (Level 9 Enemy) 120xp per kill (wz)" << endl;
+                    cout << "Skeletons (Level 13 Enemy)  200xp per kill (sk) " << endl;
+                    cout << "Giants (Level 23 Enemy) 350xp per kill (gt)" << endl;
+                    cout << "Moss giants (Level 35 enemy) 500xp per kill (msg)" << endl;
+                    cout << "More coming soon..." << endl;
+                    cin >> mgcb;
+                    if(mgcb == "gb")
+                    {
+                                cout << "ATTACKING!!!"  << endl;
+                                if ( atklvl >= 1)
+                                {
+                                    cout << "Goblin killed! +50 Magic XP"  << endl;
+                                    atkxp += 50;
+                                    atklvl = atkxp / 100 + 1;
+                                    cout << "Current attack xp is "  << atkxp << "." << endl;
+                                    cout << "Current attack level is "  << atklvl << "." << endl;
+                                }
+                                else if (atklvl < 1)
+                                {
+                                    cout << "Level not high enough!"  << endl;
+                                }
+
+                }
             }
             else if(skill == "w")
             {
@@ -128,13 +157,14 @@ if (playrs == "y")
                 cout << "Current Magic level is " << magiclvl << "."  << endl;
                 cout << "How would you like to level up magic?" << endl;
                 cout << "Combat (cb)  (will take you to fight monsters)" << endl;
+                cout << "All content below is in the paid version." << endl;
                 cout << "Enchanting jewelry (ej) (work in progress not fully done yet)" << endl;
-                cout << "Casting other spells (cs)" << endl;
                 cout << "More coming soon..." << endl;
                 cin >> mgtrain;
                 if(mgtrain == "cb")
                 {
                     cout << "Goblins (Level 2 Enemy) 50xp per kill (gb)"<< endl;
+                    cout << "All content below is in the paid version." << endl;
                     cout << "Cows (Level 5 Enemy) 75xp per kill (cw)" << endl;
                     cout << "Wizards (Level 9 Enemy) 120xp per kill (wz)" << endl;
                     cout << "Skeletons (Level 13 Enemy)  200xp per kill (sk) " << endl;
@@ -273,6 +303,7 @@ if (playrs == "y")
                 cout << "Cook's Assistant (ca) 1 quest point" << endl;
                 cout << "Prince Ali Rescue (pa) 3 quest points" << endl;
                 cout << "Romeo and Juliet (rj) 5 quest points" << endl;
+                cout << "For more content, purchase the entire game for only $0.99" << endl;
                 cin >> quest;
                 if(quest == "ca")
                 {
@@ -301,7 +332,11 @@ if (playrs == "y")
             cout << "Credits (cr)"  << endl;
             cout << "Gold balance (gp)"  << endl;
             cout << "Inventory (inv)"  << endl;
+            cout << "Gauntlets (gau) (Only in the paid version.)"  << endl;
+            cout << "Credits (cr)"  << endl;
+            cout << "Info (inf)"  << endl;
             cout << "More coming soon.."  << endl;
+
             cin >> other;
             if(other == "ge")
             {
@@ -341,7 +376,8 @@ if (playrs == "y")
             {
                 cout << "Elvarg (Dragon Slayer I required) (ev) Level 83 boss"  << endl;
                 cout << "Obor (Combat level of 60 required) (ob) Level 106 boss "  << endl;
-                cout << "Bryophyta (Combat Level of 70 required) Level 128 boss"  << endl;
+                cout << "Bryophyta (Combat Level of 70 required) (bry)Level 128 boss"  << endl;
+                cout << "All content below is in the paid version."  << endl;
                 cout << "Amoxliatl (Combat Level of 99 required) Level 263 boss"  << endl;
                 cout << "Royal Titans (Combat Level of 200 required) Level 350 boss"  << endl;
                 cout << "Doom of Mokhaiotl (Combat Level of 400 required) Level 558 boss"  << endl;
@@ -421,11 +457,8 @@ if (playrs == "y")
                 cout << "Mind rune 2gp"  << endl;
                 cout << "Body rune 3gp"  << endl;
                 cout << "Chaos rune 4gp"  << endl;
-                cout << "Nature rune 3gp"  << endl;
-                cout << "Nature rune 3gp"  << endl;
-                cout << "Nature rune 3gp"  << endl;
-                cout << "Nature rune 3gp"  << endl;
-                cout << "Nature rune 3gp"  << endl;
+                cout << "----EVENT ITEMS----"  << endl;
+                cout << "Available in the full version."  << endl;
 
                 cout << "More items coming soon....."  << endl;
 
@@ -453,7 +486,7 @@ if (playrs == "y")
                 cout << "Curse - 3 Earth runes, 2 Water runes and 1 Body rune | Lvl 19 required"  << endl;
                 cout << "Bind - 3 Earth runes, 3 Water runes and 2 Nature runes | Lvl 20 required"  << endl;
                 cout << "Low Level Alchemy - 3 Fire runes and 1 Nature rune | Lvl 21 required"  << endl;
-                cout << "More Spells coming soon..."  << endl;
+                cout << "More Spells In the paid version."  << endl;
 
             }
 
@@ -469,14 +502,78 @@ if (playrs == "y")
                 cout << "Current Sword: " << swordequip  << endl;
 
             }
+
             else if (other == "cr")
+            {
+
+
             cout << "Made by @vxy5 (on discord) Original RuneScape by Jagex Ltd. Donate for more games!"  << endl;
 
+            }
+            else if (other ==  "gau")
+        {
+                cout << "All content below is in the paid version. "<< endl;
+                cout << "Al kharid underground - costs 50K gp "<< endl;
+                cout << "Spindel - cost 1M gp " << endl;
+                cout << "Ferox caves - cost 7.7M gp " <<  endl;
+                cout << "More in the paid version.  "  << endl;
+                cin >> gauntletchoice;
+                if(gauntletchoice == "ak")
+                {
+                    if(gp<50000)
+                    {
+                        cout << "Not enough gold to open gauntlet!"  << endl;
+                    }
+                    else
+                    {
+                        cout << "placeholder "  << endl;
+                        gp-=50000;
+                    }
+                }
+                if(gauntletchoice == "sp")
+                {
+                    if(gp<1000000)
+                    {
+                        cout << "Not enough gold to open gauntlet!"  << endl;
+                    }
+                    else
+                    {
+                        cout << "placeholder "  << endl;
+                        gp-=1000000;
+                    }
+                }
+                if(gauntletchoice == "fc")
+                {
+                    if(gp<7777777)
+                    {
+                        cout << "Not enough gold to open gauntlet!"  << endl;
+                    }
+                    else
+                    {
+                        cout << "placeholder "  << endl;
+                        gp-=7777777;
+                    }
+                }
+
         }
+            else if (other == "inf")
+            {
+
+
+            cout << "RuneScapeConsoleApp V1.1 (free version)"  << endl;
+
+            }
 }
 }
+}
+
 return 0;
+
 }
+
+
+
+
 
 
 
