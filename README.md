@@ -1,4 +1,4 @@
-# 🧙 Terminal Realms
+# 🧙 RuneScapeConsoleApp
 
 A text-based RPG inspired by classic MMORPG progression systems.  
 Built in C++ as a console application.
